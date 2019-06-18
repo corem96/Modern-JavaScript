@@ -1,0 +1,76 @@
+body {
+  background: #34373e;
+  font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
+}
+
+#container {
+  width: 576px;
+  height: 515px;
+  border-radius: 3px;
+  overflow: hidden;
+  box-shadow: 0 0 5px rgba(0,0,0,0.8);
+  background: #f4f4f4;
+  margin: 10px auto;
+}
+
+#stuff {
+  color: #84878e;
+  height: 40px;
+  padding: 20px;
+}
+
+button, input, submit {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+input {
+  background: #1fc198;
+  padding: 10px;
+  font-size: 14px;
+  color: white;
+  display: inline-block;
+  float: right;
+  border: 0;
+  border-radius: 3px;
+  transition: background 0.2s;
+}
+
+input:hover {
+  background: #0a8f6c;
+}
+
+#stuff > strong {
+  font-size: 2em;
+  color: #37383d;
+}
+
+#separator {
+  width: 40%;
+  border-bottom: 1px solid #d4d4d4;
+  margin: 5px auto;
+}
+
+.delete-msg {
+  float: right;
+  padding-right: 25px;
+  cursor: pointer;
+  color: #ec413b;
+  font-weight: 700;
+}
+
+.delete-msg:hover {
+  color: #be120d;
+}
+
+#comments-area {
+  padding: 40px;
+  text-align: center;
+}
+
+#comments {
+  text-align: left;
+  opacity: 0.6;
+}
