@@ -1,16 +1,23 @@
 /*jshint esversion: 6 */
-cargarDatos = () => {
-    const xhr = new XMLHttpRequest();    
-    //abrir conexión
-    xhr.open('GET', 'datos.txt', true);
+const btn1 = document.getElementById('boton1');
 
+btn1.addEventListener('click', () => {
+    const xhr = new XMLHttpRequest();
+
+    xhr.open('GET', 'empleado.json', true);
     xhr.onload = () => {
-        if(xhr.status === 200 || xhr.status === 304) {
-            document.getElementById('listado').innerHTML = `<h1>${xhr.responseText}</h1>`;
+        if(xhr.status === 200 || xhr.status === 304){
+            const persona = JSON.parse(xhr.responseText);
+            let htmlTemplate = `
+            <ul>
+                <li>${persona.id}</li>
+                <li>${persona.nombre}</li>
+                <li>${persona.empresa}</li>
+                <li>${persona.puesto}</li>
+            </ul>`;
+            
+            document.getElementById('empleado').innerHTML = htmlTemplate;
         }
     };
-
     xhr.send();
-};
-
-document.getElementById('cargar').addEventListener('click', cargarDatos);
+});
