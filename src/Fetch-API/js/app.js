@@ -6,9 +6,7 @@ cargarTxt = () => {
 
 cargarJson = () => {
     fetch('empleados.json')
-        .then(res => {
-            return res.json()
-        })
+        .then(res => res.json())
         .then(data => {
             let temp = '';
             data.forEach(empleado => {
