@@ -1,11 +1,7 @@
 cargarTxt = () => {
     fetch('datos.txt')
-        .then(res => {
-            return res.text();
-        })
-        .then(data => {
-            document.getElementById('resultado').innerHTML = data;
-        });
+        .then(res => res.text())
+        .then(data => document.getElementById('resultado').innerHTML = data);
 };
 
 cargarJson = () => {
@@ -26,9 +22,7 @@ cargarJson = () => {
 
 cargarApi = () => {
     fetch('https://picsum.photos/v2/list')
-        .then(res => {
-            return res.json();
-        })
+        .then(res => res.json())
         .then(imagenes => {
             let temp = '';
             imagenes.forEach(imagen => {
